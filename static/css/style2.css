@@ -1,0 +1,384 @@
+.user {
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 85%;
+}
+
+.question1 {
+    display: block;
+    position: absolute;
+    top: 7%;
+    left: 2%;
+}
+
+.name-select {
+    border: 2px solid black;
+    margin: 15px;
+    width: 280px;
+    padding: 5px;
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.question2 {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 2%;
+}
+
+.img1 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+
+.img2 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+.img3 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+.img4 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+}
+
+.img5 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 55%;
+}
+
+.img6 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 65%;
+}
+
+.img7 {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 75%;
+}
+
+.number1 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 13%;
+}
+
+.number2 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 23%;
+}
+
+.number3 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 33%;
+}
+
+.number4 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 43%;
+}
+
+.number5 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 53%;
+}
+
+.number6 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 63%;
+}
+
+.number7 {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 23%;
+}
+
+.checkbox_1 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 14%;
+}
+
+.checkbox_2 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 24%;
+}
+
+.checkbox_3 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 34%;
+}
+
+.checkbox_4 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 44%;
+}
+
+.checkbox_5 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 54%;
+}
+
+.checkbox_6 {
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 64%;
+}
+
+.checkbox_7 {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 24%;
+}
+
+.back {
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+
+.report {
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+}
+
+@media screen and (max-width: 800px) {
+    .user {
+        display: block;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+    }
+
+    .question1 {
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+
+    .name-select {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+
+    }
+
+    .question2 {
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 2%;
+    }
+
+    .number1 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 3%;
+    }
+
+    .checkbox_1 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 6%;
+    }
+
+    .img1 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 9%;
+    }
+
+    .number2 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 29%;
+    }
+
+    .checkbox_2 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 32%;
+    }
+
+    .img2 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 35%;
+    }
+
+    .number3 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 55%;
+    }
+
+    .checkbox_3 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 58%;
+    }
+
+    .img3 {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 61%;
+    }
+
+    .number4 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 19%;
+    }
+
+    .checkbox_4 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 22%;
+    }
+
+    .img4 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+    }
+
+    .number5 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+    }
+
+    .checkbox_5 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 48%;
+    }
+
+    .img5 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 51%;
+    }
+
+    .number6 {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 19%;
+    }
+
+    .checkbox_6 {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 22%;
+    }
+
+    .img6 {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 25%;
+    }
+
+    .number7 {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 45%;
+    }
+
+    .checkbox_7 {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 48%;
+    }
+
+    .img7 {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 51%;
+    }
+
+    .back {
+        display: block;
+        position: absolute;
+        top: 95%;
+        left: 40%;
+    }
+
+    .report {
+        display: block;
+        position: absolute;
+        top: 95%;
+        left: 50%;
+    }
+}

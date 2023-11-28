@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>温冷感申告アプリ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<main>
+    <div class="main">
+        <form method="post" action="/report" enctype="multipart/form-data">
+            <!-- <label for="">{{ name }}</label>
+            <label for="">{{ clo }}</label>
+            <label for="">{{ x }}</label>
+            <label for="">{{ y }}</label> -->
+
+            <input type="hidden" id="name" name="name" value={{name}}>
+            <input type="hidden" id="clo" name="clo_value" value={{clo}}>
+            <input type="hidden" id="devicex" name="devicex" value={{x}}>
+            <input type="hidden" id="devicey" name="devicey" value={{y}}>
+            <input type="hidden" id="x1" name="x1" value={{x1}}>
+            <input type="hidden" id="y1" name="y1" value={{y1}}>
+            <input type="hidden" id="x2" name="w1" value={{w1}}>
+            <input type="hidden" id="y2" name="h1" value={{h1}}>
+            <!-- <input type="hidden" id="hiddenx" name="hiddenx" value="">
+            <input type="hidden" id="hiddeny" name="hiddeny" value=""> -->
+            <input type="hidden" id="hiddendeviceID" name="hiddendeviceID" value={{deviceID}}>
+            <input type="hidden" id="hiddencheckboxvalue" name="hiddencheckboxvalue" value={{checkbox_value}}>
+            <canvas class="board" id="board" width={{width}} height={{height}}></canvas>
+            <button type='submit' class="TooHot" name='TooHot' value='TooHot'>暑い</button>
+            <button type='submit' class="Hot" name='Hot' value='Hot'>やや暑い</button>
+            <button type='submit' class="Comfortable" name='Comfortable' value='Comfortable'>快適</button>
+            <button type='submit' class="Cold" name='Cold' value='Cold'>やや寒い</button>
+            <button type='submit' class="TooCold" name='TooCold' value='TooCold'>寒い</button>
+            <input type="hidden" id="temp" name="temp" value={{temp}}>
+        </form>
+        <p id="RealtimeClockArea2" class="RealtimeClockArea2"></p>
+        <div class="user">デバイス管理番号： {{ deviceID }}</div>
+        <p id="intro" class="intro">
+            今週は「温冷間申告＋空調制御システム（可視化あり）」の実験期間です。<br>
+            温冷感申告をしていただくと、座席最寄りの空調機の設定温度が変更され、温度調整が行われます。</p>
+
+
+    </div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-11/js/5-1-11.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/script1.js') }}"></script>
+<!-- <script type="text/javascript" src="js/script.js"></script> -->
+
+</html>

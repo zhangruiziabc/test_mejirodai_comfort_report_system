@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>温冷感申告アプリ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style2.css') }}">
+</head>
+
+<body>
+    <main>
+        <div class="main">
+            <form name="report" method="post" action="/control" enctype="multipart/form-data">
+                <!-- <label for="">{{ hiddenx }}</label>
+                <label for="">{{ hiddeny }}</label>
+                <label for="">{{ hotorcold }}</label>
+                <label for="">{{ deviceID }}</label>
+                <label for="">{{ name }}</label>
+                <label for="">{{ clo }}</label> -->
+
+                <div>
+                    <p class="question1">あなたは誰ですか？</p>
+                    <select name="name" class="name-select" id="name-select">
+                        <!-- <option value={{ name }}>{{ name1 }}</option> -->
+                        <option value="">選択してください</option>
+                        <option value="Guest-User">ゲスト</option>
+                        <option value="Takasi-Nishimoto">西本 隆</option>
+                        <option value="Katsuya-Koike">小池 克弥</option>
+                        <option value="Ruizi-Zhang">張 瑞子</option>
+                        <option value="Koya-Narumi">鳴海 紘也</option>
+                        <option value="Hiroaki-Murakami">村上 弘晃</option>
+                        <option value="Yuki-Tsushio">對尾 優紀</option>
+                        <option value="Ken-Takaki">高木 健</option>
+                        <option value="Yuta-Noma">野間 裕太</option>
+                        <option value="Akari-Shimono">下野 明佳里</option>
+                        <option value="Ho-Enomoto">榎本 朋</option>
+                        <option value="Kazuki-Koyama">小山 和紀</option>
+                        <option value="Dongzhu-Li">李 東柱</option>
+                        <option value="Yuichi-Honjo">本庄 祐一</option>
+                        <option value="Ryusei-Shimoda">霜田 龍成</option>
+                        <option value="Yuki-Mitarai">御手洗 勇輝</option>
+                        <option value="Kenji-Kobayashi">小林 研二</option>
+                        <option value="Noriko-Ooga">大賀 典子</option>
+                        <option value="Akihiko-Yoshida">吉田 安紀彦</option>
+                        <option value="Tomomi-Kanai">金井 智美</option>
+                        <option value="Mikiko-Nakajima">中島 幹子</option>
+                        <option value="Yukiya-Mita">三田 有輝也</option>
+                        <option value="Yohsuke-Kamiya">神谷 洋介</option>
+                        <option value="Hiroto Wada">和田 熙仁</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p class="question2">今日の服装を教えてください（一番近い選択肢を選択してください）</p>
+                    <img class="img1" src="static\\images\\img1.png" width="100" height="150">
+                    <img class="img2" src="static\\images\\img2.png" width="100" height="150">
+                    <img class="img3" src="static\\images\\img3.png" width="110" height="150">
+                    <img class="img4" src="static\\images\\img4.png" width="100" height="150">
+                    <img class="img5" src="static\\images\\img5.png" width="100" height="150">
+                    <img class="img6" src="static\\images\\img6.png" width="100" height="150">
+                    <img class="img7" src="static\\images\\img7.png" width="100" height="150">
+                </div>
+
+                <label for="" class="number1">①</label>
+                <label for="" class="number2">②</label>
+                <label for="" class="number3">③</label>
+                <label for="" class="number4">④</label>
+                <label for="" class="number5">⑤</label>
+                <label for="" class="number6">⑥</label>
+                <label for="" class="number7">⑦</label>
+
+                <input type="radio" class="checkbox_1" name="clo_value" value="1" {{ checked1 }}>
+                <input type="radio" class="checkbox_2" name="clo_value" value="2" {{ checked2 }}>
+                <input type="radio" class="checkbox_3" name="clo_value" value="3" {{ checked3 }}>
+                <input type="radio" class="checkbox_4" name="clo_value" value="4" {{ checked4 }}>
+                <input type="radio" class="checkbox_5" name="clo_value" value="5" {{ checked5 }}>
+                <input type="radio" class="checkbox_6" name="clo_value" value="6" {{ checked6 }}>
+                <input type="radio" class="checkbox_7" name="clo_value" value="7" {{ checked7 }}>
+
+                <input type="hidden" name="devicex" value={{x}}>
+                <input type="hidden" name="devicey" value={{y}}>
+                <input type="hidden" id="x1" name="x1" value={{x1}}>
+                <input type="hidden" id="y1" name="y1" value={{y1}}>
+                <input type="hidden" id="x2" name="w1" value={{w1}}>
+                <input type="hidden" id="y2" name="h1" value={{h1}}>
+                <!-- <input type="hidden" name="hiddenx" value={{hiddenx}}>
+                <input type="hidden" name="hiddeny" value={{hiddeny}}> -->
+                <input type="hidden" name="hiddendeviceID" value={{deviceID}}>
+                <input type="hidden" name="hotorcold" value={{hotorcold}}>
+                <button type='submit' class="back" name='button' value='back'>戻る</button>
+                <button type='submit' class="report" name='button' value='report' onClick="return check()">申告</button>
+            </form>
+            <div class="user">デバイス管理番号： {{ deviceID }}</div>
+        </div>
+    </main>
+</body>
+
+<script type="text/javascript">
+    function check() {
+        if (report.name.value == "") {
+            alert("お名前を選択してください");    //エラーメッセージを出力
+            return false;    //送信ボタン本来の動作をキャンセルします
+        } else if (report.clo_value.value == "") {
+            alert("服装を選択してください");    //エラーメッセージを出力
+            return false;    //送信ボタン本来の動作をキャンセルします
+        } else {
+            //条件に一致しない場合(メールアドレスが入力されている場合)
+            return true;    //送信ボタン本来の動作を実行します
+        }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-11/js/5-1-11.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/script2.js') }}"></script>
+<!-- <script type="text/javascript" src="js/script.js"></script> -->
+
+
+</html>

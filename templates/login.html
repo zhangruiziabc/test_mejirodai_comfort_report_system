@@ -1,0 +1,17 @@
+<h1>ログイン</h1>
+<form action="/device_register" method="POST">
+    <label for="">ユーザ名</label>
+    <input type="text" name="username">
+    <input type="hidden" id="name" name="name" value="自分のユーザーIDを選択してください">
+    <label for="">パスワード</label>
+    <input type="password" name="password">
+    <input type="submit" value="ログイン">
+</form>
+
+<script>
+    history.pushState(null, null, location.href);
+    window.addEventListener('popstate', (e) => {
+        history.go(1);
+    });
+
+</script>

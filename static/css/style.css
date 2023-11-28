@@ -1,0 +1,141 @@
+.temp_dist {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+
+.TooHot {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 15%;
+}
+
+.Hot {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 25%;
+}
+
+.Comfortable {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 35%;
+}
+
+.Cold {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+}
+
+.TooCold {
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 55%;
+}
+
+.user {
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 85%;
+}
+
+.RealtimeClockArea2 {
+    display: block;
+    position: absolute;
+    top: 18%;
+    left: 16%;
+}
+
+.intro {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: #ff0000;
+    font-weight: bold;
+    top: 1%;
+    left: 2%;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 21%;
+    left: 5%;
+}
+
+@media screen and (max-width: 800px) {
+    .intro {
+        display: block;
+        position: absolute;
+        font-size: 12px;
+        line-height: 30px;
+        color: #ff0000;
+        font-weight: bold;
+        top: 5%;
+        left: 2%;
+    }
+
+    .user {
+        display: block;
+        position: absolute;
+        top: 1%;
+        left: 50%;
+    }
+
+    .RealtimeClockArea2 {
+        display: block;
+        position: absolute;
+        top: 18%;
+        left: 30%;
+    }
+
+    canvas {
+        display: block;
+        position: absolute;
+        top: 21%;
+        left: 5%;
+    }
+
+    .TooHot {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 10%;
+    }
+
+    .Hot {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 25%;
+    }
+
+    .Comfortable {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 45%;
+    }
+
+    .Cold {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 60%;
+    }
+
+    .TooCold {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 80%;
+    }
+}
